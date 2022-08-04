@@ -1,0 +1,28 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "ñoquis",
+      "review": 4,
+      "alreadyCooked": false,
+      "ingredients": [
+        "papa",
+        "peceto",
+        "tomate"
+      ],
+      "description": "caecaecae"
+    },
+    {
+      "name": "humita",
+      "review": 4,
+      "alreadyCooked": false,
+      "ingredients": [
+        "choclo",
+        "queso",
+        "albahaca"
+      ],
+      "description": "caecaecae",
+      "id": 2
+    }
+  ]
+}
