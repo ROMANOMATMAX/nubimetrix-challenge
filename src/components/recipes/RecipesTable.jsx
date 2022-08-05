@@ -2,31 +2,21 @@ import styled from 'styled-components';
 import { Recipe } from './Recipe';
 
 const TableLayout = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "name"
-    "aside aside"
-    "main-content main-content";
-
+  padding: 0 15px;
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "header header"
-      "aside main-content";
-}
+    padding: 0 48px 0 0;
+  }
 `
 
-export const RecipesTable = () => {
+export const RecipesTable = ({ recipes }) => {
   return (
-    <div>
-      <Recipe />
-      <Recipe />
-      <Recipe />
-      <Recipe />
-      <Recipe />
-    </div>
+    <TableLayout>
+      {recipes.map((recipe) => (
+        <Recipe
+          key={recipe.id}
+          recipe={recipe}
+        />
+      ))}
+    </TableLayout>
   )
 }
